@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru" data-validate="html">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lorem ipsum">
+    <title>Тех.задание</title>
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
+    <link rel="stylesheet" href="sass/style.scss">
+  </head>
+
+  <body class="page-body">
+    <header class="page-body__header header">
+      <div class="header__tel">
+        <a class="header__tel-link" href="tel:89630000000">+7 963 000 00 00</a>
+      </div>
+      <div class="header__logo">
+        <img class="header__logo logo" src="img/logo.svg" width="42" height="71" alt="Логотип компании">
+      </div>
+
+    </header>
+    <main class="page-body__main main">
+      <section class="main__hero hero">
+        <div class="hero__wrapper">
+          <h1 class="hero__title">Lorem ipsum dolor sit 
+            amet Aenean commodo</h1>
+          <p class="hero__p">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo</p>
+          <p class="hero__p-strong">ligula eget dolor</p>
+        </div>
+        <a class="hero__link-button" href="#"></a>
+        <picture>
+          <source media="(min-width: 1920px)" width="491" height="597" type="image/webp" srcset="img/hero@1x.webp 1x, img/hero@2x.webp 2x">
+          <source media="(min-width: 1920px)" width="491" height="597" type="image/png" srcset="img/hero@1x.png 1x, img/hero@2x.png 2x">
+          <source width="238" height="288" type="image/webp" srcset="img/hero@2x.webp 1x, img/hero@2x.webp 2x">
+          <img class="hero__img" src="img/hero@1x.png" width="238" height="288" srcset="img/hero@2x.png 2x" alt="Статуя богини" fetchpriority="low">
+        </picture>
+      </section>
+      <section class="main__catalog catalog">
+        <h2 class="catalog__title">Lorem ipsum</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item catalog__item--color">
+            <span class="catalog__number catalog__number--color">01</span>
+            <p class="catalog__p catalog__p--color">Lorem ipsum</p>
+            <p class="catalog__info catalog__info--color">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor</p>
+          </li>
+          <li class="catalog__item">
+            <span class="catalog__number">02</span>
+            <p class="catalog__p">Lorem ipsum</p>
+            <p class="catalog__info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula </p>
+          </li>
+          <li class="catalog__item">
+            <span class="catalog__number">03</span>
+            <p class="catalog__p">Lorem ipsum</p>
+            <p class="catalog__info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula</p>
+          </li>
+          <li class="catalog__item catalog__item--color">
+            <span class="catalog__number catalog__number--color">04</span>
+            <p class="catalog__p catalog__p--color">Lorem ipsum</p>
+            <p class="catalog__info catalog__info--color">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula</p>
+          </li>
+        </ul>
+      </section>
+      <section class="main__about about">
+        <div class="about__container-slide">
+          <div class="about__title-wrapper">
+            <h2 class="about__title">Dolor sit amet</h2>
+            <div class="about__scrollbar-wrapper">
+              <div class="about__swiper-scrollbar swiper-scrollbar"></div>
+              <div class="about__button-wrapper swiper-navigation swiper-navigation--about">
+                <button class="about__swiper-button--prev swiper-button--prev about__swiper-button swiper-button swiper-button--about-prev" type="button" tabindex="0">
+                  <span class="visually-hidden">Предыдущий слайд.</span>
+                </button>
+                <button class="about__swiper-button--next swiper-button--next about__swiper-button swiper-button swiper-button--about-next" type="button" tabindex="0">
+                  <span class="visually-hidden">Следующий слайд.</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="about__swiper swiper">
+            <div class="about__swiper-wrapper swiper-wrapper">
+              <div class="about__wrapper about__wrapper--lilac swiper-slide" tabindex="0">           
+                <div class="about__card">
+                  <p class="about__name">Lorem ipsum</p>
+                  <p class="about__info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+              </div>
+              <div class="about__wrapper about__wrapper--pink swiper-slide" tabindex="0">           
+                <div class="about__card">
+                  <p class="about__name">Lorem ipsum</p>
+                  <p class="about__info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+              </div>
+              <div class="about__wrapper about__wrapper--blue swiper-slide" tabindex="0">           
+                <div class="about__card">
+                  <p class="about__name">Lorem ipsum</p>
+                  <p class="about__info">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main__card card">
+        <h2 class="card__title">Donec sodales</h2>
+        <div class="card__container">
+          <picture>
+            <source media="(min-width: 1920px)" width="378" height="565" type="image/webp" srcset="img/card-1@1x.webp 1x, img/card-1@2x.webp 2x">
+            <source media="(min-width: 1920px)" width="378" height="565" type="image/jpg" srcset="img/card-1@1x.jpg 1x, img/card-1@2x.jpg 2x">
+            <source width="360" height="517" type="image/webp" srcset="img/card-1@1x.webp 1x, img/card-1@2x.webp 2x">
+            <img class="card__img" src="img/card-1@1x.jpg" width="360" height="517" srcset="img/card-1@2x.jpg 2x" alt="Статуя богини" fetchpriority="low">
+          </picture>
+        </div>
+      </section>
+    </main>
+    <footer class="page-body__footer footer">
+      <div class="footer__wrapper">
+        <div class="footer__logotype-wrapper">
+          <img class="footer__logotype logotype" width="30" height="51"  src="./img/logo.svg" alt="Логотип компании Internship." loading="lazy">
+        </div>
+        <div class="footer__info">
+          <p class="footer__info-text">Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska. Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde. </p>
+        </div>
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--faceboor" href="#">
+                <span class="visually-hidden">Мы в Фэйсбук</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">
+                <span class="visually-hidden">Мы в Твиттере</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--in" href="#">
+                <span class="visually-hidden">Мы в IN</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#">
+                <span class="visually-hidden">Мы в Инстаграм</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__list-wrapper">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Page</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Lorem ipsum</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Dolor sit amet</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Dolor sit amet</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__map-wrapper">
+          <h3 class="footer__map-title">Maps Location</h3>
+          <picture>
+            <source media="(min-width: 1920px)" width="378" height="230" type="image/webp" srcset="img/map-desktop-lorem@1x.webp 1x, img/map-desktop-lorem@2x.webp 2x">
+            <source media="(min-width: 1920px)" width="378" height="230" type="image/png" srcset="img/map-desktop-lorem@1x.png 1x, img/map-desktop-lorem@2x.png 2x">
+            <img class="footer__map" src="img/map-mobile@1x.png" width="360" height="214" srcset="img/map-mobile@2x.png 2x" alt="Карта" fetchpriority="low">
+          </picture>
+      </div>
+      <div class="footer__p">© ООО “Lorem ipsum dolor”, 2023. Все права защищены.</div>
+      <div class="footer__link-spm">
+        <a class="footer__spm-link">
+          <img class="footer__spm-img" src="img/sprite/logo-spm.svg" width="126" height="62">
+        </a>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+
+</html>

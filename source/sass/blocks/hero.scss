@@ -1,0 +1,12 @@
+.hero {
+  min-height: 568px;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    min-height: 1024px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 800px;
+  }
+}

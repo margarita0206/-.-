@@ -1,0 +1,544 @@
+.hero-swiper {
+  height: 568px;
+  width: 320px;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 1024px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 800px;
+  }
+}
+
+.hero-swiper__swiper-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-flow: nowrap;
+}
+
+.hero-swiper__slide {
+  position: relative;
+  width: 100%;
+  height: 568px;
+  display: flex;
+  align-items: flex-end;
+  flex-flow: wrap;
+  padding: 30px 15px 19px;
+  flex-shrink: 0;
+  pointer-events: none;
+
+  @media (min-width: $tablet-width) {
+    height: 1024px;
+    padding: 90px 64px 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 800px;
+    padding: 100px 100px 60px;
+  }
+}
+
+.hero-swiper__swiper-wrapper .swiper-slide-active {
+  pointer-events: auto;
+}
+
+.hero-swiper__pagination {
+  max-width: 80px;
+  height: 29px;
+  position: absolute;
+  bottom: 338px;
+  background-color: $white-color;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+  gap: 2px;
+
+  &--fade-out {
+    opacity: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    bottom: 0;
+    right: -12px;
+    background-color: $white-color;
+    mask: url("/__spritemap#sprite-angle-view") center center no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    bottom: 330px;
+    min-height: 40px;
+    max-width: 100px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      bottom: 0;
+      right: -19px;
+      background-color: $white-color;
+      mask: url("/__spritemap#sprite-angle-view") center center no-repeat;
+    }
+  }
+}
+
+.hero-swiper__pagination-bullet {
+  width: 8px;
+  height: 8px;
+  position: relative;
+  top: -1px;
+  transition: opacity 0.3s $smooth;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 70%;
+  }
+
+  &:hover::before {
+    background-color: $white-color;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    background-color: $blue-color;
+  }
+
+  &:focus-visible::before {
+    background-color: $blue-color;
+  }
+
+  &:focus-visible::after {
+    background-color: $blue-color;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:active::before {
+    background-color: $active-color-button;
+  }
+
+  &:active::after {
+    background-color: $active-color-button;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: $blue-color;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s $smooth, background-color 0.3s $smooth;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: $white-color;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s $smooth, background-color 0.3s $smooth;
+  }
+
+  &--active::after {
+    opacity: 0;
+  }
+
+  &--active::before {
+    background-color: $active-color-button;
+  }
+}
+
+.hero-swiper__picture-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  pointer-events: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(49, 109, 194, 0.2);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.hero-swiper__picture {
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.hero-swiper__content-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-swiper__title {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 25px 16px 14px;
+  width: 290px;
+  min-height: 140px;
+  background-color: $white-color;
+  color: $blue-color;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 267px;
+    height: 100px;
+    background-color: $white-color;
+    left: 0;
+    bottom: -55px;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    bottom: -10px;
+    right: 13px;
+    background-color: $white-color;
+    mask: url("/__spritemap#sprite-angle-view") center center no-repeat;
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: span 2;
+    width: 659px;
+    min-height: 142px;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 30px 69px 24px 40px;
+
+    &::after {
+      bottom: -25px;
+      right: 45px;
+      width: 26px;
+      height: 26px;
+      mask: url("/__spritemap#sprite-corner-bottom-view") center center no-repeat;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 62px;
+    width: 968px;
+    padding: 40px 50px 30px;
+
+    &::after {
+      right: 173px;
+    }
+  }
+}
+
+.hero-swiper__cms-wrapper {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 184px;
+    height: 100px;
+    background-color: $white-color;
+    left: 0;
+    bottom: -15px;
+    z-index: -1;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    bottom: -10px;
+    right: 73px;
+    background-color: $white-color;
+    mask: url("/__spritemap#sprite-angle-view") center center no-repeat;
+    transform: rotate(90deg);
+  }
+
+  p {
+    margin: 0;
+    width: 267px;
+    min-height: 115px;
+    border-bottom-right-radius: 14px;
+    background-color: $white-color;
+    color: #484848;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0 14px 15px;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 135px;
+    height: min-content;
+    width: 325px;
+    background-color: $white-color;
+    border-bottom-left-radius: 30px;
+
+    p {
+      font-size: 16px;
+      height: min-content;
+      line-height: 20px;
+      padding: 0 0 35px 40px;
+      width: 285px;
+      border-bottom-left-radius: 30px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 594px;
+        height: 120%;
+        background-color: $white-color;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+    }
+
+    &::before {
+      border-bottom-right-radius: 30px;
+      width: 594px;
+      height: 145px;
+      bottom: 0;
+      border-bottom-left-radius: 30px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 113px;
+
+    &::before {
+      width: 775px;
+    }
+
+    p {
+      width: 446px;
+      font-size: 16px;
+      line-height: 26px;
+      padding: 0 0 35px 50px;
+      min-height: 78px;
+
+      &::before {
+        width: 775px;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.hero-swiper__button-wrapper {
+  margin: 10px 0 9px 15px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 184px;
+    min-height: 64px;
+    left: -15px;
+    top: -10px;
+    background-color: $white-color;
+    z-index: -1;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-self: flex-end;
+    align-self: flex-start;
+    margin: 0 106px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 243px 0 0;
+  }
+}
+
+.hero-swiper__button {
+  @include font($primary-font, 12px, 12px, $blue-color);
+
+  font-weight: 500;
+  border: 1px solid $blue-color;
+  letter-spacing: 0.24px;
+  border-radius: 30px;
+  width: 154px;
+  background-color: $white-color;
+  min-height: 44px;
+  padding: 16px 59px 16px 21px;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 14px, 14px, $blue-color);
+
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    padding: 22px 82px 22px 31px;
+    width: 198px;
+    min-height: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 21px 81px 21px 31px;
+    width: 199px;
+    min-height: 58px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-color: $blue-color;
+    border-radius: 50%;
+    right: 4px;
+    top: 4px;
+
+    @media (min-width: $tablet-width) {
+      width: 46px;
+      height: 46px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+    background-color: $white-color;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-size: 10px 10px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: 16px;
+    right: 15px;
+
+    @media (min-width: $tablet-width) {
+      width: 10px;
+      height: 10px;
+      top: 22px;
+      right: 21px;
+    }
+  }
+
+  &:hover {
+    color: $white-color;
+    background-color: $blue-color;
+
+    &::after {
+      background-color: $white-color;
+    }
+
+    &::before {
+      background-color: $blue-color;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: $blue-color;
+
+    &::after {
+      background-color: $white-color;
+    }
+
+    &::before {
+      background-color: rgba(49, 109, 194, 0.7);
+      transform: rotate(45deg);
+    }
+  }
+
+  &:disabled {
+    color: $disabled-color;
+    background-color: $primary-fon;
+    border: 1px solid $disabled-color;
+
+    &::after {
+      background-color: $disabled-color;
+    }
+
+    &::before {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
